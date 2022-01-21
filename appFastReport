@@ -1,0 +1,18 @@
+unit appFastReport;
+
+
+interface
+
+uses frxClass;
+
+{Report}
+Function appFR_Report_Create(name:string):TfrxReport;
+Function appFR_ReportDefaultsSet(var report:TfrxReport):Boolean;
+
+Function appFR_Report_Create(name:string):TfrxReport;
+Begin
+  result := TfrxReport.Create(nil);
+  if name.Length<>0 then   result.Name:=name;
+  if name.Length=0 then result.CreateUniqueName;
+  result.Clear;
+End;
