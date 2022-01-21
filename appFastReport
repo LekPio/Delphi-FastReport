@@ -2,13 +2,13 @@ unit appFastReport;
 
 interface
 
-uses frxClass;
+uses frxClass,System.SysUtils;
+
+Function appFR_Report_Create(name:string):TfrxReport;
 
 implementation
 
-{Report}
-Function appFR_Report_Create(name:string):TfrxReport;
-
+{FastReport Extension}
 Function appFR_Report_Create(name:string):TfrxReport;
 Begin
   result := TfrxReport.Create(nil);
