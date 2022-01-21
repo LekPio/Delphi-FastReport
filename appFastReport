@@ -1,13 +1,11 @@
 unit appFastReport;
 
-
 interface
 
 uses frxClass;
 
 {Report}
 Function appFR_Report_Create(name:string):TfrxReport;
-Function appFR_ReportDefaultsSet(var report:TfrxReport):Boolean;
 
 Function appFR_Report_Create(name:string):TfrxReport;
 Begin
